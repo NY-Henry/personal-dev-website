@@ -5,45 +5,70 @@ import {
 } from "@heroicons/react/24/outline";
 
 const About = () => {
+  // Controll the experience from here
   const experience = [
     {
       title: "Senior Full-Stack Developer",
-      company: "Tech Innovations Inc.",
-      period: "2022 - Present",
+      company: "Stock Nest Innovations Inc.",
+      period: "2024 - Present",
       description:
-        "Lead development of enterprise applications using React, Node.js, and AWS. Mentor junior developers and architect scalable solutions.",
+        "Lead development of enterprise applications using React, Node.js, and Cloudflare, etc.",
     },
-    {
-      title: "Full-Stack Developer",
-      company: "Digital Solutions LLC",
-      period: "2020 - 2022",
-      description:
-        "Developed and maintained multiple client projects using modern web technologies. Improved application performance by 40%.",
-    },
-    {
-      title: "Frontend Developer",
-      company: "StartupXYZ",
-      period: "2019 - 2020",
-      description:
-        "Built responsive web applications using React and TypeScript. Collaborated with design teams to create exceptional user experiences.",
-    },
+    // {
+    //   title: "Full-Stack Developer",
+    //   company: "Digital Solutions LLC",
+    //   period: "2020 - 2022",
+    //   description:
+    //     "Developed and maintained multiple client projects using modern web technologies. Improved application performance by 40%.",
+    // },
+    // {
+    //   title: "Frontend Developer",
+    //   company: "StartupXYZ",
+    //   period: "2019 - 2020",
+    //   description:
+    //     "Built responsive web applications using React and TypeScript. Collaborated with design teams to create exceptional user experiences.",
+    // },
   ];
 
+  // Controll Education From here
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "New York University",
-      year: "2019",
+      degree: "Bachelor of Software Engineering",
+      school: "Ndejje University",
+      year: "2023 - 2027",
       description:
-        "Specialized in software engineering and web development. Graduated Magna Cum Laude.",
+        "Specialized in software engineering, Machine Learning & Data Science, Mobile developmemnt and web development.",
     },
   ];
 
+  // controll certifications Here
   const certifications = [
-    "AWS Certified Solutions Architect",
     "Google Cloud Professional Developer",
     "React Developer Certification",
     "Node.js Certified Developer",
+    "AWS Certified Solutions Architect",
+  ];
+
+  // Control core values from here
+  const coreValues = [
+    {
+      icon: "🎯",
+      title: "Quality First",
+      description:
+        "I believe in writing clean, maintainable code that stands the test of time. Every line is crafted with purpose and precision.",
+    },
+    {
+      icon: "🤝",
+      title: "Collaboration",
+      description:
+        "Great software is built by great teams. I thrive in collaborative environments and believe in transparent communication.",
+    },
+    {
+      icon: "🚀",
+      title: "Innovation",
+      description:
+        "I stay ahead of technology trends to deliver cutting-edge solutions that give my clients a competitive advantage.",
+    },
   ];
 
   return (
@@ -55,7 +80,7 @@ const About = () => {
             About <span className="text-primary-color">NY Henry</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Passionate full-stack developer with 5+ years of experience creating
+            Passionate full-stack developer with 3+ years of experience creating
             innovative web solutions that drive business growth and user
             engagement.
           </p>
@@ -70,17 +95,26 @@ const About = () => {
             <div className="space-y-4 text-gray-600">
               <p>
                 My passion for technology started early, but it was during my
-                computer science studies at NYU that I discovered my love for
-                web development. What began as curiosity about how websites work
-                evolved into a career dedicated to creating exceptional digital
-                experiences.
+                computer science(Software Engineering) studies at{" "}
+                <a
+                  href="https://ndejjeuniversity.ac.ug/"
+                  key={"Ndejje University"}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="text-primary-color underline transition-colors duration-200"
+                >
+                  NDU
+                </a>{" "}
+                that I discovered my love for web development. What began as
+                curiosity about how websites work evolved into a career
+                dedicated to creating exceptional digital experiences.
               </p>
               <p>
-                Over the past 5 years, I've had the privilege of working with
+                Over the past 4 years, I've had the privilege of working with
                 startups, established companies, and individual entrepreneurs.
                 Each project has taught me something new and reinforced my
                 belief that great software isn't just about clean code—it's
-                about solving real problems for real people.
+                about solving real problems for real people in the real world.
               </p>
               <p>
                 When I'm not coding, you'll find me exploring the latest tech
@@ -91,7 +125,7 @@ const About = () => {
           </div>
           <div className="lg:text-center">
             <div className="inline-block p-8 bg-gradient-to-br from-orange-50 to-white rounded-2xl shadow-lg">
-              <div className="w-80 h-80 bg-gradient-primary rounded-xl flex items-center justify-center">
+              <div className="w-72 h-72 bg-gradient-primary rounded-xl flex items-center justify-center">
                 <span className="text-8xl font-bold text-white">NH</span>
               </div>
             </div>
@@ -178,43 +212,17 @@ const About = () => {
             My Core Values
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-color rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
+            {coreValues.map((value, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-primary-color rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">{value.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600">{value.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Quality First
-              </h3>
-              <p className="text-gray-600">
-                I believe in writing clean, maintainable code that stands the
-                test of time. Every line is crafted with purpose and precision.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-color rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🤝</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Collaboration
-              </h3>
-              <p className="text-gray-600">
-                Great software is built by great teams. I thrive in
-                collaborative environments and believe in transparent
-                communication.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-color rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚀</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Innovation
-              </h3>
-              <p className="text-gray-600">
-                I stay ahead of technology trends to deliver cutting-edge
-                solutions that give my clients a competitive advantage.
-              </p>
-            </div>
+            ))}
           </div>
         </section>
       </div>

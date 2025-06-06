@@ -2,22 +2,25 @@ import { Link } from "react-router-dom";
 import { ArrowRightIcon, CheckIcon } from "@heroicons/react/24/outline";
 
 const Home = () => {
+  // Skills are controlled from here
   const skills = [
-    "React & Next.js",
+    "React(Vite) & Next.js",
+    "ReactNative & Expo",
     "Node.js & Express",
     "TypeScript",
-    "Python & Django",
-    "PostgreSQL & MongoDB",
-    "AWS & Cloudflare",
-    "Docker & Kubernetes",
+    "Python",
+    "PostgreSQL, MySQL & MongoDB",
+    "Firebase & Cloudflare",
+    // "Docker & Kubernetes",
     "GraphQL & REST APIs",
   ];
 
+  // Stats Are Controlled from Here
   const stats = [
-    { label: "Projects Completed", value: "50+" },
-    { label: "Happy Clients", value: "30+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Technologies Mastered", value: "20+" },
+    { label: "Projects Completed", value: "10+" },
+    { label: "Happy Clients", value: "10+" },
+    { label: "Years Experience", value: "3+" },
+    { label: "Technologies Mastered", value: "15+" },
   ];
 
   return (
@@ -54,7 +57,7 @@ const Home = () => {
               </div>
             </div>
             <div className="lg:text-right">
-              <div className="inline-block p-8 bg-white rounded-2xl shadow-xl">
+              <div className="inline-block p-8 bg-primary-color rounded-2xl shadow-xl">
                 <div className="w-64 h-64 bg-gradient-primary rounded-xl flex items-center justify-center">
                   <span className="text-6xl font-bold text-white">NH</span>
                 </div>
@@ -89,7 +92,7 @@ const Home = () => {
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               I stay current with the latest technologies to deliver
-              cutting-edge solutions
+              cutting-edge solutions (Continuously learning)
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

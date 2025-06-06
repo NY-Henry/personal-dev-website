@@ -41,19 +41,19 @@ const Contact = () => {
     {
       icon: <EnvelopeIcon className="w-6 h-6" />,
       title: "Email",
-      details: "contact@nyhenry.dev",
-      link: "mailto:contact@nyhenry.dev",
+      details: "contact@nyomorehenry@gmail.com",
+      link: "mailto:contact@nyomorehenry@gmail.com",
     },
     {
       icon: <PhoneIcon className="w-6 h-6" />,
       title: "Phone",
-      details: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      details: "+256 761424742",
+      link: "tel:++256761424742",
     },
     {
       icon: <MapPinIcon className="w-6 h-6" />,
       title: "Location",
-      details: "New York, NY, USA",
+      details: "Kampala, KLA, UG",
       link: null,
     },
     {
@@ -197,11 +197,11 @@ const Contact = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-transparent"
                     >
                       <option value="">Select budget range</option>
-                      <option value="under-5k">Under $5,000</option>
-                      <option value="5k-10k">$5,000 - $10,000</option>
-                      <option value="10k-25k">$10,000 - $25,000</option>
-                      <option value="25k-50k">$25,000 - $50,000</option>
-                      <option value="over-50k">Over $50,000</option>
+                      <option value="under-1k">Under $1,000</option>
+                      <option value="1k-3k">$1,000 - $3,000</option>
+                      <option value="3k-6k">$3,000 - $6,000</option>
+                      <option value="6k-10k">$6,000 - $10,000</option>
+                      <option value="over-10k">Over $10,000</option>
                     </select>
                   </div>
                 </div>
@@ -250,6 +250,7 @@ const Contact = () => {
                 </div>
 
                 <button
+                  onClick={handleSubmit}
                   type="submit"
                   className="w-full bg-primary-color text-white py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
                 >

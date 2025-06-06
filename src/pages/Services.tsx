@@ -8,87 +8,149 @@ import {
 } from "@heroicons/react/24/outline";
 
 const Services = () => {
+  // controll the services from here
   const services = [
     {
       icon: <CodeBracketIcon className="w-12 h-12 text-primary-color" />,
       title: "Web Development",
       description:
-        "Custom web applications built with modern frameworks like React, Next.js, and Node.js. Scalable, secure, and optimized for performance.",
+        "Custom web applications built with modern frameworks like React, Next.js, Node.js & Express. Scalable, secure, and optimized for performance with cutting-edge technologies.",
       features: [
-        "React & Next.js",
-        "Node.js & Express",
-        "TypeScript",
-        "Database Design",
+        "React & Next.js Applications",
+        "Node.js & Express Backend",
+        "TypeScript/JavaScript",
+        "Database Design & Integration",
+        "Cloud Deployment & Hosting",
+        "Ongoing Maintenance & Support",
       ],
-      price: "Starting at $5,000",
+      price: "Starting at $1,000",
+      duration: "2-6 weeks (Depending on the project)",
+      technologies: [
+        "React",
+        // "Next.js",
+        "TypeScript",
+        "Node.js",
+        "DataBase Design",
+        "BaaS",
+        "Cloudflare Workers",
+        "Hosting Platforms",
+      ],
     },
     {
       icon: <DevicePhoneMobileIcon className="w-12 h-12 text-primary-color" />,
-      title: "Mobile-First Design",
+      title: "Mobile App Development",
       description:
-        "Responsive web applications that work flawlessly across all devices. Progressive Web Apps (PWA) for mobile-like experiences.",
+        "Cross-platform mobile applications and Progressive Web Apps (PWA) that deliver native-like experiences across iOS and Android devices.",
       features: [
-        "Responsive Design",
-        "PWA Development",
-        "Mobile Optimization",
-        "Cross-browser Testing",
+        "React Native Development",
+        "Progressive Web Apps (PWA)",
+        "Cross-Platform Compatibility",
+        "App Store Deployment",
+        "Push Notifications",
+        "Offline Functionality",
       ],
-      price: "Starting at $3,000",
+      price: "Starting at $600.00",
+      duration: "4-10 weeks (Depending on the project)",
+      technologies: ["React Native", "Expo", "PWA", "Firebase", "Zustand"],
     },
     {
       icon: <CloudIcon className="w-12 h-12 text-primary-color" />,
       title: "Cloud Solutions",
       description:
-        "Deploy and scale your applications on AWS, Google Cloud, or Azure. CI/CD pipelines and infrastructure as code.",
+        "Deploy and scale your applications on AWS, Google Cloud, or Azure with automated CI/CD pipelines and infrastructure as code for maximum reliability.",
       features: [
-        "AWS/GCP/Azure",
-        "Docker & Kubernetes",
-        "CI/CD Pipelines",
-        "Auto-scaling",
+        "Multi-Cloud Deployment (AWS/GCP/Azure)",
+        "Docker & Kubernetes Orchestration",
+        "CI/CD Pipeline Setup",
+        "Auto-scaling & Load Balancing",
+        "Monitoring & Logging",
+        "Infrastructure as Code",
       ],
-      price: "Starting at $2,500",
+      price: "Starting at $2,000",
+      duration: "1-3 weeks",
+      technologies: [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "GitHub Actions",
+      ],
     },
     {
       icon: <CogIcon className="w-12 h-12 text-primary-color" />,
       title: "API Development",
       description:
-        "RESTful APIs and GraphQL endpoints. Third-party integrations and microservices architecture.",
+        "Robust RESTful APIs and GraphQL endpoints with comprehensive documentation. Seamless third-party integrations and microservices architecture.",
       features: [
         "REST & GraphQL APIs",
-        "Microservices",
-        "API Documentation",
-        "Third-party Integrations",
+        "Microservices Architecture",
+        "Comprehensive API Documentation",
+        "Third-party Service Integrations",
+        "Authentication & Authorization",
+        "Rate Limiting & Security",
       ],
       price: "Starting at $2,000",
+      duration: "2-4 weeks",
+      technologies: [
+        "Node.js",
+        "Express",
+        "GraphQL",
+        "JWT",
+        "Swagger",
+        "Postman",
+      ],
     },
     {
       icon: <ShoppingCartIcon className="w-12 h-12 text-primary-color" />,
       title: "E-commerce Solutions",
       description:
-        "Complete e-commerce platforms with payment processing, inventory management, and admin dashboards.",
+        "Complete e-commerce platforms with advanced payment processing, inventory management, analytics, and intuitive admin dashboards for business growth.",
       features: [
-        "Payment Integration",
-        "Inventory Management",
-        "Admin Dashboard",
-        "Order Processing",
+        "Multi-Payment Gateway Integration",
+        "Advanced Inventory Management",
+        "Comprehensive Admin Dashboard",
+        "Order & Customer Management",
+        "Analytics & Reporting",
+        "SEO & Marketing Tools",
       ],
-      price: "Starting at $8,000",
+      price: "Starting at $5,000",
+      duration: "6-12 weeks",
+      technologies: [
+        "Next.js",
+        "Stripe",
+        "PayPal",
+        "Shopify API",
+        "Analytics",
+        "CMS",
+      ],
     },
     {
       icon: <ChartBarIcon className="w-12 h-12 text-primary-color" />,
       title: "Performance Optimization",
       description:
-        "Audit and optimize existing applications for better performance, SEO, and user experience.",
+        "Comprehensive audit and optimization of existing applications for superior performance, enhanced SEO rankings, and exceptional user experience.",
       features: [
-        "Performance Audit",
-        "SEO Optimization",
-        "Core Web Vitals",
-        "Code Optimization",
+        "Complete Performance Audit",
+        "Advanced SEO Optimization",
+        "Core Web Vitals Improvement",
+        "Code Splitting & Lazy Loading",
+        "Database Query Optimization",
+        "Accessibility Compliance",
       ],
-      price: "Starting at $1,500",
+      price: "Starting at $2,000",
+      duration: "1-2 weeks",
+      technologies: [
+        "Lighthouse",
+        "GTmetrix",
+        "Webpack",
+        "Next.js",
+        "React",
+        "SEO Tools",
+      ],
     },
   ];
 
+  // Controll the proceses from here
   const process = [
     {
       step: "01",
@@ -118,26 +180,27 @@ const Services = () => {
       step: "05",
       title: "Support & Maintenance",
       description:
-        "Post-launch support, monitoring, and maintenance to ensure your application runs smoothly.",
+        "Post-launch support, monitoring, and maintenance to ensure your application runs smoothly. (Extra costs)",
     },
   ];
 
+  // Controll the testimonials from here
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
+      name: "Ainebyoona Benjamin",
+      company: "Bekarplastics FortPOrtal.",
       text: "NY Henry delivered an exceptional web application that exceeded our expectations. Professional, reliable, and highly skilled.",
       rating: 5,
     },
+    // {
+    //   name: "Michael Chen",
+    //   company: "E-commerce Plus",
+    //   text: "The e-commerce platform Henry built for us increased our sales by 300%. Outstanding work and great communication.",
+    //   rating: 5,
+    // },
     {
-      name: "Michael Chen",
-      company: "E-commerce Plus",
-      text: "The e-commerce platform Henry built for us increased our sales by 300%. Outstanding work and great communication.",
-      rating: 5,
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Agency",
+      name: "Linus",
+      company: "CF Financial services",
       text: "Working with Henry was a pleasure. He understood our requirements perfectly and delivered on time and within budget.",
       rating: 5,
     },
@@ -153,7 +216,8 @@ const Services = () => {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From concept to deployment, I provide comprehensive web development
-            services that help businesses succeed in the digital world.
+            & Software services that help businesses succeed in the digital
+            world.
           </p>
         </div>
 
@@ -170,6 +234,7 @@ const Services = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
+
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li
@@ -181,6 +246,34 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+
+                {/* Duration */}
+                <div className="mb-4">
+                  <span className="text-sm font-medium text-gray-500">
+                    Duration:{" "}
+                  </span>
+                  <span className="text-sm text-gray-700">
+                    {service.duration}
+                  </span>
+                </div>
+
+                {/* Technologies */}
+                <div className="mb-6">
+                  <span className="text-sm font-medium text-gray-500 block mb-2">
+                    Technologies:
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="text-primary-color font-bold text-lg mb-4">
                   {service.price}
                 </div>
