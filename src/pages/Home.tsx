@@ -9,9 +9,10 @@ const Home = () => {
     "Node.js & Express",
     "TypeScript",
     "Python",
+    "Git & GitHub",
     "PostgreSQL, MySQL & MongoDB",
     "Firebase & Cloudflare",
-    // "Docker & Kubernetes",
+    "Docker & Kubernetes",
     "GraphQL & REST APIs",
   ];
 
