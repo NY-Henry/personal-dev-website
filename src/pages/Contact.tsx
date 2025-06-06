@@ -182,13 +182,13 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:contact@nyhenry.dev"
+              href="mailto:nyomorehenry@gmail.com"
               className="bg-primary-color text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
             >
               Email Me Directly
             </a>
             <a
-              href="tel:+15551234567"
+              href="tel:+256761424742"
               className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors duration-200 font-medium"
             >
               Call Now
