@@ -1,42 +1,11 @@
-import { useState } from "react";
 import {
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
   ClockIcon,
-  CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    budget: "",
-    message: "",
-    projectType: "web-development",
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
-
   const contactInfo = [
     {
       icon: <EnvelopeIcon className="w-6 h-6" />,
