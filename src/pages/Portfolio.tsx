@@ -3,6 +3,7 @@ import {
   ArrowTopRightOnSquareIcon,
   EyeIcon,
 } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -18,6 +19,7 @@ interface Project {
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const navigate = useNavigate();
 
   const categories = ["All", "Web Apps", "E-commerce", "APIs", "Mobile"];
 
@@ -299,10 +301,16 @@ const Portfolio = () => {
             expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary-color text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium">
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-primary-color cursor-pointer text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
+            >
               Start Your Project
             </button>
-            <button className="border-2 border-primary-color text-primary-color px-8 py-3 rounded-lg hover:bg-primary-color hover:text-white transition-colors duration-200 font-medium">
+            <button
+              onClick={() => navigate("/portfolio")}
+              className="border-2 cursor-pointer border-primary-color text-primary-color px-8 py-3 rounded-lg hover:bg-primary-color hover:text-white transition-colors duration-200 font-medium"
+            >
               View All Projects
             </button>
           </div>

@@ -6,8 +6,11 @@ import {
   ShoppingCartIcon,
   ChartBarIcon,
 } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+
   // controll the services from here
   const services = [
     {
@@ -277,7 +280,10 @@ const Services = () => {
                 <div className="text-primary-color font-bold text-lg mb-4">
                   {service.price}
                 </div>
-                <button className="w-full bg-primary-color text-white py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium">
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="w-full cursor-pointer bg-primary-color text-white py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
+                >
                   Get Started
                 </button>
               </div>
@@ -352,11 +358,11 @@ const Services = () => {
             together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary-color px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-medium">
-              Get Free Quote
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary-color transition-colors duration-200 font-medium">
-              Schedule Consultation
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-white cursopo text-primary-color px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-medium"
+            >
+              Let's Do This 🚀
             </button>
           </div>
         </section>

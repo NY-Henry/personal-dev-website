@@ -106,162 +106,21 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-20">
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Send Me a Message
-              </h2>
-
-              {isSubmitted && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
-                  <CheckCircleIcon className="w-5 h-5 text-green-500 mr-2" />
-                  <span className="text-green-700">
-                    Message sent successfully! I'll get back to you within 24
-                    hours.
-                  </span>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-transparent"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-transparent"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Company (Optional)
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-transparent"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="budget"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Project Budget
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-transparent"
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="under-1k">Under $1,000</option>
-                      <option value="1k-3k">$1,000 - $3,000</option>
-                      <option value="3k-6k">$3,000 - $6,000</option>
-                      <option value="6k-10k">$6,000 - $10,000</option>
-                      <option value="over-10k">Over $10,000</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="projectType"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Project Type
-                  </label>
-                  <select
-                    id="projectType"
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-transparent"
-                  >
-                    <option value="web-development">Web Development</option>
-                    <option value="mobile-app">Mobile App</option>
-                    <option value="e-commerce">E-commerce</option>
-                    <option value="api-development">API Development</option>
-                    <option value="consultation">Consultation</option>
-                    <option value="maintenance">Maintenance/Support</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Project Details *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-transparent"
-                    placeholder="Tell me about your project, goals, timeline, and any specific requirements..."
-                  />
-                </div>
-
-                <button
-                  onClick={handleSubmit}
-                  type="submit"
-                  className="w-full bg-primary-color text-white py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+          <div className="lg:col-span-2 order-2 lg:order-1">
+            {/* Google Form Embeded */}
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdGIDsI6Ph6nEcci1jzICgChVOkiEoHOz4sRmARx0wsO74fsQ/viewform?embedded=true"
+              className="w-full h-[800px] md:h-[1000px] lg:h-[1200px] border-0 rounded-lg shadow-lg"
+              title="Contact Form"
+            >
+              Loading…
+            </iframe>
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 order-1 lg:order-2">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-6">
                 Contact Information
@@ -269,22 +128,24 @@ const Contact = () => {
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="text-primary-color mr-3 mt-1">
+                    <div className="text-primary-color mr-3 mt-1 flex-shrink-0">
                       {info.icon}
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <div className="font-medium text-gray-900">
                         {info.title}
                       </div>
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="text-gray-600 hover:text-primary-color transition-colors"
+                          className="text-gray-600 hover:text-primary-color transition-colors break-words"
                         >
                           {info.details}
                         </a>
                       ) : (
-                        <div className="text-gray-600">{info.details}</div>
+                        <div className="text-gray-600 break-words">
+                          {info.details}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -292,16 +153,16 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-primary-color p-6 rounded-lg text-white">
+            {/* <div className="bg-primary-color p-6 rounded-lg text-white">
               <h3 className="text-xl font-bold mb-4">Let's Schedule a Call</h3>
               <p className="mb-4 text-orange-100">
                 Prefer to talk? Let's schedule a free 30-minute consultation
                 call to discuss your project.
               </p>
-              <button className="bg-white text-primary-color px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-medium">
+              <button className="w-full sm:w-auto bg-white text-primary-color px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-medium">
                 Schedule Call
               </button>
-            </div>
+            </div> */}
 
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -312,7 +173,7 @@ const Contact = () => {
                 sooner. For urgent projects, please mention it in your message.
               </p>
               <div className="flex items-center text-primary-color">
-                <ClockIcon className="w-5 h-5 mr-2" />
+                <ClockIcon className="w-5 h-5 mr-2 flex-shrink-0" />
                 <span className="font-medium">
                   24/7 availability for urgent matters
                 </span>
