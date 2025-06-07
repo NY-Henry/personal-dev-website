@@ -39,7 +39,7 @@ const Portfolio = () => {
         "Cloudflare",
         "Render",
       ],
-      liveUrl: "https://b9b4d413.bms-landingpage.pages.dev/",
+      liveUrl: "#",
       githubUrl: "https://github.com/NY-Henry",
       features: [
         "Stock Management",
