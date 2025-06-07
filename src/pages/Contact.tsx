@@ -10,8 +10,8 @@ const Contact = () => {
     {
       icon: <EnvelopeIcon className="w-6 h-6" />,
       title: "Email",
-      details: "contact@nyhenry.com",
-      link: "mailto:contact@nyhenry.com",
+      details: "contact me: nyhenry@nyhenry.com",
+      link: "mailto:nyhenry@nyhenry.com",
     },
     {
       icon: <PhoneIcon className="w-6 h-6" />,
@@ -182,7 +182,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:contact@nyhenry.com"
+              href="mailto:nyhenry@nyhenry.com"
               className="bg-primary-color text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
             >
               Email Me Directly
