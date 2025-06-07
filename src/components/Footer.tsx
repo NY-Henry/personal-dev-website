@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { images } from "../constants/images";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -61,8 +62,12 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary-color rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">NH</span>
+              <div className="w-10 h-10  rounded-2xl flex items-center justify-center">
+                <img
+                  src={images.ny_logo}
+                  alt="LOGO"
+                  className="border rounded-2xl"
+                />
               </div>
               <span className="text-xl font-bold">NY Henry</span>
             </div>

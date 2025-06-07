@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { images } from "../constants/images";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,8 +25,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary-color rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">NH</span>
+            <div className="w-10 h-10  rounded-2xl flex items-center justify-center">
+              <img src={images.ny_logo} alt="LOGO" />
             </div>
             <span className="text-xl font-bold text-gray-900">NY Henry</span>
           </Link>
