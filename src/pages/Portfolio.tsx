@@ -266,7 +266,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-color mb-2">
-                50+
+                10+
               </div>
               <div className="text-gray-300">Projects Completed</div>
             </div>
@@ -303,7 +303,7 @@ const Portfolio = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => navigate("/contact")}
-              className="bg-primary-color cursor-pointer text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
+              className="bg-black cursor-pointer text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
             >
               Start Your Project
             </button>

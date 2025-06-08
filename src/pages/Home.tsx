@@ -127,7 +127,7 @@ const Home = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center bg-white text-primary-color px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-medium"
+            className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-medium"
           >
             Start a Project
             <ArrowRightIcon className="w-5 h-5 ml-2" />

@@ -360,7 +360,7 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => navigate("/contact")}
-              className="bg-white cursopo text-primary-color px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-medium"
+              className="bg-black cursopo text-white px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-medium"
             >
               Let's Do This 🚀
             </button>
