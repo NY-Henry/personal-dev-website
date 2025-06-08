@@ -33,22 +33,22 @@ const MusicSnippet = () => {
   role: 'Software Engineer & Music Producer',
   location: 'Kampala, Uganda',
   university: 'Ndejje University',
-  Coding stack: ['React', 'TypeScript', 'Vite', ...],
-  Music Stack: ['Fl Studio', 'Splice', 'FabFilter Bundle', 'Nexus', ...]
+  Coding stack: ['TypeScript', 'Vite', ...],
+  Music Stack: ['Fl Studio', 'Nexus', ...]
 };`;
 
   return (
-    // Main container
-    <div className="bg-slate-900 rounded-xl shadow-2xl overflow-hidden my-8 max-w-2xl mx-auto">
+    // Main container - responsive width and margins
+    <div className="bg-slate-900 rounded-xl shadow-2xl overflow-hidden my-4 sm:my-8 max-w-2xl mx-auto w-full px-4 sm:px-0">
       {/* Header with window dots */}
-      <div className="bg-slate-800 p-4 flex items-center">
-        <span className="h-3 w-3 bg-red-500 rounded-full mr-2"></span>
-        <span className="h-3 w-3 bg-yellow-500 rounded-full mr-2"></span>
-        <span className="h-3 w-3 bg-green-500 rounded-full"></span>
+      <div className="bg-slate-800 p-3 sm:p-4 flex items-center">
+        <span className="h-2 w-2 sm:h-3 sm:w-3 bg-red-500 rounded-full mr-2"></span>
+        <span className="h-2 w-2 sm:h-3 sm:w-3 bg-yellow-500 rounded-full mr-2"></span>
+        <span className="h-2 w-2 sm:h-3 sm:w-3 bg-green-500 rounded-full"></span>
       </div>
 
       {/* Code and Controls Section */}
-      <div className="p-6">
+      <div className="p-3 sm:p-6">
         <SyntaxHighlighter
           language="javascript"
           style={vscDarkPlus}
@@ -61,36 +61,38 @@ const MusicSnippet = () => {
           codeTagProps={{
             style: {
               fontFamily: '"Fira Code", monospace', // A popular coding font
-              fontSize: "0.9rem",
+              fontSize: window.innerWidth < 640 ? "0.75rem" : "0.9rem",
             },
           }}
         >
           {codeString}
         </SyntaxHighlighter>
 
-        {/* Interactive Controls */}
-        <div className="mt-4 flex items-center gap-6 font-mono text-sm">
+        {/* Interactive Controls - responsive layout */}
+        <div className="mt-3 sm:mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 font-mono text-xs sm:text-sm">
           <button
             onClick={togglePlay}
-            className="text-sky-400 hover:underline focus:outline-none focus:ring-2 focus:ring-sky-500 text-xl rounded-sm"
+            className="text-sky-400 hover:underline focus:outline-none focus:ring-2 focus:ring-sky-500 text-base sm:text-xl rounded-sm flex items-center"
           >
             {isPlaying ? (
               <>
-                <PauseIcon className="w-6 h-6 inline mr-1" />
-                track.pause()
+                <PauseIcon className="w-5 h-5 sm:w-6 sm:h-6 inline mr-1" />
+                <span className="break-all">track.pause()</span>
               </>
             ) : (
               <>
-                <PlayIcon className="w-6 h-6 inline mr-1" />
-                track.play()
+                <PlayIcon className="w-5 h-5 sm:w-6 sm:h-6 inline mr-1" />
+                <span className="break-all">track.play()</span>
               </>
             )}
           </button>
           <button
             onClick={() => setShowInfo(!showInfo)}
-            className="text-fuchsia-400 text-xl hover:underline focus:outline-none focus:ring-2 focus:ring-fuchsia-500 rounded-sm"
+            className="text-fuchsia-400 text-base sm:text-xl hover:underline focus:outline-none focus:ring-2 focus:ring-fuchsia-500 rounded-sm"
           >
-            {showInfo ? "user.hideInfo()" : "user.showInfo()"}
+            <span className="break-all">
+              {showInfo ? "user.hideInfo()" : "user.showInfo()"}
+            </span>
           </button>
         </div>
 
@@ -98,7 +100,7 @@ const MusicSnippet = () => {
         <AnimatePresence>
           {showInfo && (
             <motion.div
-              className="mt-4 p-4 bg-slate-800 rounded-lg text-slate-300 text-base"
+              className="mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-800 rounded-lg text-slate-300 text-sm sm:text-base"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
