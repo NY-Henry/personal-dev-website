@@ -3,6 +3,7 @@ import {
   BriefcaseIcon,
   TrophyIcon,
 } from "@heroicons/react/24/outline";
+import MusicSnippet from "../components/MusicSnippet";
 
 const About = () => {
   // Controll the experience from here
@@ -118,18 +119,29 @@ const About = () => {
               </p>
               <p>
                 When I'm not coding, you'll find me exploring the latest tech
-                trends, contributing to open-source projects, or sharing
-                knowledge through technical writing and mentoring.
+                trends, contributing to open-source projects, or making music, I
+                love making music- check out my{" "}
+                <a
+                  href="https://www.youtube.com/@nyhenry"
+                  key={"Ndejje University"}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="text-primary-color underline transition-colors duration-200"
+                >
+                  YOUTUBE CHANNEL
+                </a>{" "}
+                for more.
               </p>
             </div>
           </div>
-          <div className="lg:text-center">
+          <MusicSnippet />
+          {/* <div className="lg:text-center">
             <div className="inline-block p-8 bg-gradient-to-br from-orange-50 to-white rounded-2xl shadow-lg">
               <div className="w-72 h-72 bg-gradient-primary rounded-xl flex items-center justify-center">
                 <span className="text-8xl font-bold text-white">NH</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Experience Section */}
