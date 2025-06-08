@@ -26,7 +26,7 @@ const Services = () => {
         "Cloud Deployment & Hosting",
         "Ongoing Maintenance & Support",
       ],
-      price: "Starting at $1,000",
+      price: "Starting at UGX 1,500,000",
       duration: "2-6 weeks (Depending on the project)",
       technologies: [
         "React",
@@ -52,7 +52,7 @@ const Services = () => {
         "Push Notifications",
         "Offline Functionality",
       ],
-      price: "Starting at $600.00",
+      price: "Starting at UGX 2,000,000",
       duration: "4-10 weeks (Depending on the project)",
       technologies: ["React Native", "Expo", "PWA", "Firebase", "Zustand"],
     },
@@ -69,7 +69,7 @@ const Services = () => {
         "Monitoring & Logging",
         "Infrastructure as Code",
       ],
-      price: "Starting at $2,000",
+      price: "Starting at UGX 6,000,000",
       duration: "1-3 weeks",
       technologies: [
         "AWS",
@@ -92,7 +92,7 @@ const Services = () => {
         "Authentication & Authorization",
         "Rate Limiting & Security",
       ],
-      price: "Starting at $2,000",
+      price: "Starting at UGX 3,500,000",
       duration: "2-4 weeks",
       technologies: [
         "Node.js",
@@ -116,7 +116,7 @@ const Services = () => {
         "Analytics & Reporting",
         "SEO & Marketing Tools",
       ],
-      price: "Starting at $5,000",
+      price: "Starting at UGX 5,000,000",
       duration: "6-12 weeks",
       technologies: [
         "Next.js",
@@ -140,7 +140,7 @@ const Services = () => {
         "Database Query Optimization",
         "Accessibility Compliance",
       ],
-      price: "Starting at $2,000",
+      price: "Starting at UGX 1,000,000",
       duration: "1-2 weeks",
       technologies: [
         "Lighthouse",
