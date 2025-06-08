@@ -57,7 +57,7 @@ const Portfolio = () => {
       image: "/api/placeholder/400/300",
       technologies: ["Next.js", "Stripe", "MongoDB", "Redis", "Cloudflare"],
       liveUrl: "#",
-      githubUrl: "https://github.com/nyhenry",
+      githubUrl: "https://github.com/NY-Henry",
       features: [
         "Payment processing",
         "Inventory tracking",
@@ -393,7 +393,7 @@ const Portfolio = () => {
                   href={selectedProject.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-primary-color text-white px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
+                  className="bg-black text-white px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
                 >
                   View Live Demo
                 </a>
