@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRightIcon, CheckIcon } from "@heroicons/react/24/outline";
+import CodeSnippet from "../components/CodeSnippet";
 
 const Home = () => {
   // Skills are controlled from here
@@ -45,7 +46,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/portfolio"
-                  className="bg-primary-color text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium text-center"
+                  className="bg-black  text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium text-center"
                 >
                   View My Work
                 </Link>
@@ -57,13 +58,15 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="lg:text-right">
+            <CodeSnippet />
+            {/* <div className="lg:text-right">
               <div className="inline-block p-8 bg-primary-color rounded-2xl shadow-xl">
                 <div className="w-64 h-64 bg-gradient-primary rounded-xl flex items-center justify-center">
+                  
                   <span className="text-6xl font-bold text-white">NH</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
