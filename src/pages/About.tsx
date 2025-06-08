@@ -3,7 +3,9 @@ import {
   BriefcaseIcon,
   TrophyIcon,
 } from "@heroicons/react/24/outline";
-import MusicSnippet from "../components/MusicSnippet";
+import { lazy } from "react";
+
+const MusicSnippet = lazy(() => import("../components/MusicSnippet"));
 
 const About = () => {
   // Controll the experience from here

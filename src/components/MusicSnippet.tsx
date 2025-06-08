@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Make sure to place one of your music files in the public directory
 // or import it if your setup allows.
-import myTrack from "../assets/The One.wav";
+import myTrack from "../assets/The One.mp3";
 import { PauseIcon, PlayIcon } from "@heroicons/react/24/outline";
 
 const MusicSnippet = () => {
