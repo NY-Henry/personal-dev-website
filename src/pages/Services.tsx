@@ -282,7 +282,7 @@ const Services = () => {
                 </div>
                 <button
                   onClick={() => navigate("/contact")}
-                  className="w-full cursor-pointer bg-primary-color text-white py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
+                  className="w-full cursor-pointer bg-black text-white py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium"
                 >
                   Get Started
                 </button>
