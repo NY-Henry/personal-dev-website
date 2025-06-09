@@ -75,10 +75,10 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-20 bg-gradient-to-br from-white via-orange-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 ">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             About <span className="text-primary-color">NY Henry</span>
           </h1>

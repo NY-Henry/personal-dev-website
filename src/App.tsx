@@ -1,35 +1,61 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import About from "./pages/About.tsx";
-import Portfolio from "./pages/Portfolio.tsx";
-import Services from "./pages/Services.tsx";
-import Contact from "./pages/Contact.tsx";
+import ErrorComponent from "./components/ErrorComponent.tsx";
+import Loading from "./components/Loading.tsx";
+
+// Lazy load components
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About.tsx"));
+const Portfolio = lazy(() => import("./pages/Portfolio.tsx"));
+const Services = lazy(() => import("./pages/Services.tsx"));
+const Contact = lazy(() => import("./pages/Contact.tsx"));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <ErrorComponent />,
     children: [
       {
         index: true,
-        element: <Home />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Home />
+          </Suspense>
+        ),
       },
       {
         path: "about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "portfolio",
-        element: <Portfolio />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Portfolio />
+          </Suspense>
+        ),
       },
       {
         path: "services",
-        element: <Services />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Services />
+          </Suspense>
+        ),
       },
       {
         path: "contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Contact />
+          </Suspense>
+        ),
       },
     ],
   },
