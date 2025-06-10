@@ -45,12 +45,6 @@ const Home = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/portfolio"
-                  className="bg-black  text-white px-8 py-3 rounded-lg hover:bg-primary-hover transition-colors duration-200 font-medium text-center"
-                >
-                  View My Work
-                </Link>
-                <Link
                   to="/contact"
                   className="border-2 border-primary-color text-primary-color px-8 py-3 rounded-lg hover:bg-primary-color hover:text-white transition-colors duration-200 font-medium text-center"
                 >
